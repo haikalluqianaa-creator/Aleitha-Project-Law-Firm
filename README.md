@@ -1,5 +1,5 @@
 # Law-Firm-Website
-<title> LawFirm Website | Aleitha Laws </title>
+<title> LawFirm Website | Aleitha Laws <title>
 <style>
     :root {
       --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
