@@ -1,6 +1,16 @@
-# Law-Firm-Website
-<title> LawFirm Website | Aleitha Laws <title>
-<style>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aleitha Law — Advocates & Legal Consultants</title>
+  <!-- FIX #1: Tambahkan link Tabler Icons yang hilang agar ikon muncul -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <!-- FIX #2: Tambahkan font Google Fonts karena var(--font-sans) tidak terdefinisi -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* FIX #3: Definisikan CSS variable --font-sans yang sebelumnya kosong/tidak ada */
     :root {
       --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
     }
@@ -23,6 +33,7 @@
     .logo-name { color: #fff; font-size: 17px; font-weight: 500; letter-spacing: 1px; }
     .logo-sub { color: #c9a84c; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; }
     .nav-links { display: flex; gap: 24px; }
+    /* FIX #4: Nav links tidak punya href, tambahkan href anchor yang benar */
     .nav-links a { color: #aaa; font-size: 12px; text-decoration: none; cursor: pointer; transition: color 0.2s; }
     .nav-links a:hover { color: #c9a84c; }
     .nav-cta { background: transparent; border: 1px solid #c9a84c; color: #c9a84c; padding: 8px 18px; border-radius: 4px; font-size: 12px; cursor: pointer; transition: background 0.2s; }
@@ -124,6 +135,7 @@
     }
     input:focus, select:focus, textarea:focus { border-color: #c9a84c55; }
     textarea { min-height: 90px; resize: vertical; }
+    /* FIX #6: Tambahkan type="button" pada sub-btn agar tidak submit form secara tidak sengaja */
     .sub-btn {
       width: 100%; background: #c9a84c; color: #12131a; border: none; border-radius: 4px;
       padding: 13px; font-size: 13px; font-weight: 500; cursor: pointer; margin-top: 8px;
@@ -148,3 +160,177 @@
       .hero h1 { font-size: 30px; }
     }
   </style>
+</head>
+<body>
+
+<h2 class="sr-only">Website Aleitha Law Firm — Firma Hukum Bandung, Jawa Barat</h2>
+
+<nav class="nav">
+  <div class="logo">
+    <div class="logo-icon">⚖</div>
+    <div>
+      <div class="logo-name">ALEITHA LAW</div>
+      <div class="logo-sub">Advocates &amp; Legal Consultants</div>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="#layanan">Layanan</a>
+    <a href="#tim">Tim Kami</a>
+    <a href="#kontak">Kontak</a>
+  </div>
+  <button class="nav-cta" onclick="document.getElementById('kontak').scrollIntoView({behavior:'smooth'})">Konsultasi Gratis</button>
+</nav>
+<div class="hero">
+  <div class="hero-badge">⚖ Firma Hukum Terpercaya — Bandung, Jawa Barat</div>
+  <h1>Kami Melindungi<br><span class="gold">Hak &amp; Kepentingan</span><br>Anda</h1>
+  <p>Aleitha Law hadir dengan tim pengacara berpengalaman untuk memberikan solusi hukum terbaik bagi individu dan korporasi.</p>
+  <div class="hero-btns">
+    <button class="btn-gold" onclick="document.getElementById('kontak').scrollIntoView({behavior:'smooth'})">Konsultasi Sekarang</button>
+    <button class="btn-outline" onclick="document.getElementById('layanan').scrollIntoView({behavior:'smooth'})">Pelajari Layanan Kami</button>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="stat-num">15+</div><div class="stat-label">Tahun Pengalaman</div></div>
+    <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Kasus Selesai</div></div>
+    <div class="stat"><div class="stat-num">98%</div><div class="stat-label">Keberhasilan</div></div>
+    <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Klien Korporasi</div></div>
+  </div>
+</div>
+<section class="section sec-a" id="layanan">
+  <div class="sec-tag">Layanan Kami</div>
+  <div class="sec-title">Bidang Hukum yang Kami Tangani</div>
+  <div class="sec-sub">Kami menyediakan layanan hukum komprehensif di 5 bidang utama.</div>
+  <div class="gold-line"></div>
+  <div class="svc-grid">
+    <div class="svc">
+      <div class="svc-icon"><i class="ti ti-shield-lock" aria-hidden="true"></i></div>
+      <h3>Hukum Pidana</h3>
+      <p>Pendampingan tersangka, penasehatan hukum, dan pembelaan di persidangan pidana.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-icon"><i class="ti ti-scale" aria-hidden="true"></i></div>
+      <h3>Hukum Perdata</h3>
+      <p>Sengketa wanprestasi, gugatan perdata, dan penyelesaian perkara antar individu.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-icon"><i class="ti ti-file-description" aria-hidden="true"></i></div>
+      <h3>Hukum Waris</h3>
+      <p>Penyusunan surat wasiat, pembagian warisan, dan sengketa hak waris.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-icon"><i class="ti ti-users" aria-hidden="true"></i></div>
+      <h3>Hukum Ketenagakerjaan</h3>
+      <p>PHK, kontrak kerja, perselisihan hubungan industrial, dan konsultasi HR.</p>
+    </div>
+    <div class="svc">
+      <div class="svc-icon"><i class="ti ti-building-bank" aria-hidden="true"></i></div>
+      <h3>Hukum Korporasi</h3>
+      <p>Pendirian perusahaan, merger &amp; akuisisi, dan kepatuhan regulasi bisnis.</p>
+    </div>
+  </div>
+</section>
+<section class="section sec-b" id="tim">
+  <div class="sec-tag">Tim Kami</div>
+  <div class="sec-title">Para Ahli Hukum Aleitha Law</div>
+  <div class="sec-sub">8 pengacara berpengalaman siap memberikan solusi hukum terbaik untuk Anda.</div>
+  <div class="gold-line"></div>
+  <div class="team-grid" id="teamGrid"></div>
+</section>
+
+<section class="section sec-a" id="kontak">
+  <div class="sec-tag">Hubungi Kami</div>
+  <div class="sec-title">Konsultasikan Masalah Hukum Anda</div>
+  <div class="gold-line"></div>
+  <div class="contact-grid">
+    <div>
+      <div class="ci">
+        <div class="ci-icon"><i class="ti ti-map-pin" aria-hidden="true"></i></div>
+        <div><div class="ci-label">Alamat</div><div class="ci-val">Jl. A.H. Nasution No. 430, Bandung, Jawa Barat</div></div>
+      </div>
+      <div class="ci">
+        <div class="ci-icon"><i class="ti ti-phone" aria-hidden="true"></i></div>
+        <div><div class="ci-label">Telepon</div><div class="ci-val">+62 22 1234 5678</div></div>
+      </div>
+      <div class="ci">
+        <div class="ci-icon"><i class="ti ti-mail" aria-hidden="true"></i></div>
+        <div><div class="ci-label">Email</div><div class="ci-val">info@aleithalaw.co.id</div></div>
+      </div>
+      <div class="ci">
+        <div class="ci-icon"><i class="ti ti-clock" aria-hidden="true"></i></div>
+        <div><div class="ci-label">Jam Operasional</div><div class="ci-val">Senin – Jumat, 08.00 – 17.00 WIB</div></div>
+      </div>
+    </div>
+    <div class="form-box">
+      <div class="form-grid2">
+        <div class="form-row"><label for="nama">Nama Lengkap</label><input id="nama" type="text" placeholder="Nama Anda"></div>
+        <div class="form-row"><label for="telp">Nomor Telepon</label><input id="telp" type="tel" placeholder="+62 812 ..."></div>
+      </div>
+      <div class="form-row"><label for="email">Email</label><input id="email" type="email" placeholder="email@anda.com"></div>
+      <div class="form-row">
+        <label for="bidang">Bidang Hukum</label>
+        <select id="bidang">
+          <option value="">Pilih bidang hukum...</option>
+          <option>Hukum Pidana</option>
+          <option>Hukum Perdata</option>
+          <option>Hukum Waris</option>
+          <option>Hukum Ketenagakerjaan</option>
+          <option>Hukum Korporasi</option>
+        </select>
+      </div>
+      <div class="form-row"><label for="deskripsi">Deskripsi Permasalahan</label><textarea id="deskripsi" placeholder="Ceritakan permasalahan hukum Anda..."></textarea></div>
+      <button class="sub-btn" type="button" onclick="handleSubmit()">Kirim Permintaan Konsultasi</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fl">ALEITHA <span>LAW</span></div>
+  <p>© 2025 Aleitha Law. Jl. A.H. Nasution No. 430, Bandung, Jawa Barat</p>
+</footer>
+
+<script>
+  // FIX #10: Variabel lawyers dan grid sebelumnya tidak pakai const/let di script pertama
+  // (versi asli pertama tidak ada 'const' — bisa menyebabkan strict mode error)
+  // Versi ini sudah benar dengan const
+  const lawyers = [
+    { name: 'Isma Mustika, S.H.', role: 'Founding Partner', bio: 'Spesialis hukum pidana dan perdata dengan 15 tahun pengalaman litigasi.', initials: 'IM', photo: 'https://randomuser.me/api/portraits/women/44.jpg' },
+    { name: 'Haikal Luqiana, S.H.', role: 'Senior Partner', bio: 'Ahli hukum korporasi dan ketenagakerjaan, berpengalaman di berbagai kasus besar.', initials: 'HL', photo: 'https://randomuser.me/api/portraits/men/32.jpg' },
+    { name: 'Nurul Assita, S.H., M.H.', role: 'Senior Associate', bio: 'Spesialis hukum waris dan perdata dengan rekam jejak penyelesaian sengketa keluarga.', initials: 'NA', photo: 'https://randomuser.me/api/portraits/women/68.jpg' },
+    { name: 'Rayhan Suhardi, S.H.', role: 'Senior Associate', bio: 'Pengacara pidana berpengalaman, lulusan terbaik Universitas Padjadjaran.', initials: 'RS', photo: 'https://randomuser.me/api/portraits/men/45.jpg' },
+    { name: 'Ziddan Zinnedine, S.H.', role: 'Associate', bio: 'Menangani kasus hukum ketenagakerjaan dan korporasi di lingkup Jawa Barat.', initials: 'ZZ', photo: 'https://randomuser.me/api/portraits/men/22.jpg' },
+    { name: 'Muhammad Ervan, S.H.', role: 'Associate', bio: 'Fokus pada hukum perdata dan penyelesaian sengketa bisnis antar perusahaan.', initials: 'ME', photo: 'https://randomuser.me/api/portraits/men/56.jpg' },
+    { name: 'Salwa Salsabilla, S.H.', role: 'Junior Associate', bio: 'Spesialis hukum waris dan konsultasi hukum keluarga, lulusan Universitas Indonesia.', initials: 'SS', photo: 'https://randomuser.me/api/portraits/women/33.jpg' },
+    { name: 'Rahma Febriany, S.H.', role: 'Junior Associate', bio: 'Menangani administrasi hukum, perizinan, dan pendampingan klien korporasi baru.', initials: 'RF', photo: 'https://randomuser.me/api/portraits/women/55.jpg' },
+  ];
+  const grid = document.getElementById('teamGrid');
+  lawyers.forEach(l => {
+    const card = document.createElement('div');
+    card.className = 'tc';
+    card.innerHTML = `
+      <div class="tc-photo">
+        <img src="${l.photo}" alt="Foto ${l.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="fallback" style="display:none">${l.initials}</div>
+        <div class="tc-overlay"></div>
+      </div>
+      <div class="tc-body">
+        <div class="tc-name">${l.name}</div>
+        <div class="tc-role">${l.role}</div>
+        <div class="tc-bio">${l.bio}</div>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+  function handleSubmit() {
+    const nama = document.getElementById('nama').value.trim();
+    const telp = document.getElementById('telp').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const bidang = document.getElementById('bidang').value;
+
+    if (!nama || !telp || !email || !bidang) {
+      alert('Mohon lengkapi semua field yang diperlukan.');
+      return;
+    }
+    alert('Terima kasih, ' + nama + '! Permintaan konsultasi Anda telah kami terima. Tim kami akan menghubungi Anda segera.');
+  }
+</script>
+</body>
+</html>
