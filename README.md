@@ -14,8 +14,10 @@
     :root {
       --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
     }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: var(--font-sans); background: #12131a; color: #eee; }
+
     .nav {
       display: flex; justify-content: space-between; align-items: center;
       padding: 16px 36px;
@@ -38,6 +40,7 @@
     .nav-links a:hover { color: #c9a84c; }
     .nav-cta { background: transparent; border: 1px solid #c9a84c; color: #c9a84c; padding: 8px 18px; border-radius: 4px; font-size: 12px; cursor: pointer; transition: background 0.2s; }
     .nav-cta:hover { background: #c9a84c1a; }
+
     .hero {
       background: linear-gradient(135deg, #12131a 0%, #1a1b2e 40%, #0f1520 100%);
       padding: 70px 36px 60px; text-align: center;
@@ -59,6 +62,7 @@
     }
     .hero h1 { font-size: 46px; font-weight: 500; color: #fff; line-height: 1.1; margin-bottom: 16px; }
     .hero h1 .gold { color: #c9a84c; }
+    /* FIX #5: margin-bottom duplikat di .hero p — hapus yang pertama, pakai yang terakhir saja */
     .hero p { color: #7a7d9a; font-size: 15px; line-height: 1.7; max-width: 480px; margin: 0 auto 32px; }
     .hero-btns { display: flex; gap: 12px; justify-content: center; margin-bottom: 52px; }
     .btn-gold { background: #c9a84c; color: #12131a; border: none; padding: 12px 26px; border-radius: 4px; font-size: 13px; font-weight: 500; cursor: pointer; transition: opacity 0.2s; }
@@ -72,6 +76,7 @@
     .stat:last-child { border-radius: 0 8px 8px 0; }
     .stat-num { font-size: 26px; font-weight: 500; color: #c9a84c; }
     .stat-label { font-size: 10px; color: #555; letter-spacing: 1px; text-transform: uppercase; margin-top: 3px; }
+
     .section { padding: 64px 36px; }
     .sec-a { background: #0e0f18; }
     .sec-b { background: #12131a; }
@@ -79,6 +84,7 @@
     .sec-title { font-size: 30px; font-weight: 500; color: #fff; margin-bottom: 10px; }
     .sec-sub { color: #555; font-size: 14px; line-height: 1.6; max-width: 440px; }
     .gold-line { width: 40px; height: 2px; background: #c9a84c; margin: 14px 0 36px; }
+
     /* LAYANAN */
     .svc-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: #1a1b2e; border: 1px solid #1a1b2e; border-radius: 8px; overflow: hidden; }
     .svc { background: #12131a; padding: 28px 20px; position: relative; }
@@ -88,6 +94,8 @@
     .svc-icon { font-size: 26px; color: #c9a84c; margin-bottom: 14px; }
     .svc h3 { font-size: 13px; font-weight: 500; color: #fff; margin-bottom: 8px; }
     .svc p { font-size: 11px; color: #555; line-height: 1.6; }
+
+    /* TEAM */
     .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
     .tc {
       background: #12131a; border: 1px solid #1e2035; border-radius: 8px; overflow: hidden;
@@ -119,6 +127,8 @@
     .tc-name { font-size: 13px; font-weight: 500; color: #fff; margin-bottom: 3px; }
     .tc-role { font-size: 9px; color: #c9a84c; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
     .tc-bio { font-size: 11px; color: #555; line-height: 1.5; }
+
+    /* CONTACT */
     .contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 48px; }
     .ci { display: flex; gap: 14px; margin-bottom: 22px; }
     .ci-icon { width: 38px; height: 38px; background: #c9a84c1a; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 17px; color: #c9a84c; flex-shrink: 0; }
@@ -142,15 +152,20 @@
       transition: opacity 0.2s;
     }
     .sub-btn:hover { opacity: 0.85; }
+
     footer { background: #0a0b12; border-top: 1px solid #1e2035; padding: 24px 36px; display: flex; justify-content: space-between; align-items: center; }
     .fl { font-size: 15px; font-weight: 500; color: #fff; }
     .fl span { color: #c9a84c; }
     footer p { font-size: 11px; color: #333; }
+
+    /* FIX #7: Tambahkan class sr-only yang dipakai di HTML tapi tidak didefinisikan di CSS */
     .sr-only {
       position: absolute; width: 1px; height: 1px;
       padding: 0; margin: -1px; overflow: hidden;
       clip: rect(0,0,0,0); white-space: nowrap; border: 0;
     }
+
+    /* Responsive dasar */
     @media (max-width: 768px) {
       .svc-grid { grid-template-columns: repeat(2, 1fr); }
       .team-grid { grid-template-columns: repeat(2, 1fr); }
@@ -173,6 +188,7 @@
       <div class="logo-sub">Advocates &amp; Legal Consultants</div>
     </div>
   </div>
+  <!-- FIX #4: Tambahkan href="#id" yang benar pada nav links -->
   <div class="nav-links">
     <a href="#layanan">Layanan</a>
     <a href="#tim">Tim Kami</a>
@@ -180,6 +196,7 @@
   </div>
   <button class="nav-cta" onclick="document.getElementById('kontak').scrollIntoView({behavior:'smooth'})">Konsultasi Gratis</button>
 </nav>
+
 <div class="hero">
   <div class="hero-badge">⚖ Firma Hukum Terpercaya — Bandung, Jawa Barat</div>
   <h1>Kami Melindungi<br><span class="gold">Hak &amp; Kepentingan</span><br>Anda</h1>
@@ -195,6 +212,8 @@
     <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Klien Korporasi</div></div>
   </div>
 </div>
+
+<!-- FIX #4: Tambahkan id="layanan" untuk anchor nav -->
 <section class="section sec-a" id="layanan">
   <div class="sec-tag">Layanan Kami</div>
   <div class="sec-title">Bidang Hukum yang Kami Tangani</div>
@@ -208,6 +227,7 @@
     </div>
     <div class="svc">
       <div class="svc-icon"><i class="ti ti-scale" aria-hidden="true"></i></div>
+      <!-- FIX #8: Ikon ti-balance tidak ada di Tabler Icons, ganti ke ti-scale yang valid -->
       <h3>Hukum Perdata</h3>
       <p>Sengketa wanprestasi, gugatan perdata, dan penyelesaian perkara antar individu.</p>
     </div>
@@ -228,11 +248,14 @@
     </div>
   </div>
 </section>
+
+<!-- FIX #4: Tambahkan id="tim" untuk anchor nav -->
 <section class="section sec-b" id="tim">
   <div class="sec-tag">Tim Kami</div>
   <div class="sec-title">Para Ahli Hukum Aleitha Law</div>
   <div class="sec-sub">8 pengacara berpengalaman siap memberikan solusi hukum terbaik untuk Anda.</div>
   <div class="gold-line"></div>
+  <!-- FIX #9: Hapus kartu tim yang di-hardcode di HTML (duplikat dengan yang dibuat JavaScript) -->
   <div class="team-grid" id="teamGrid"></div>
 </section>
 
@@ -277,6 +300,7 @@
         </select>
       </div>
       <div class="form-row"><label for="deskripsi">Deskripsi Permasalahan</label><textarea id="deskripsi" placeholder="Ceritakan permasalahan hukum Anda..."></textarea></div>
+      <!-- FIX #6: Tambahkan type="button" dan onclick handler sederhana -->
       <button class="sub-btn" type="button" onclick="handleSubmit()">Kirim Permintaan Konsultasi</button>
     </div>
   </div>
@@ -301,6 +325,7 @@
     { name: 'Salwa Salsabilla, S.H.', role: 'Junior Associate', bio: 'Spesialis hukum waris dan konsultasi hukum keluarga, lulusan Universitas Indonesia.', initials: 'SS', photo: 'https://randomuser.me/api/portraits/women/33.jpg' },
     { name: 'Rahma Febriany, S.H.', role: 'Junior Associate', bio: 'Menangani administrasi hukum, perizinan, dan pendampingan klien korporasi baru.', initials: 'RF', photo: 'https://randomuser.me/api/portraits/women/55.jpg' },
   ];
+
   const grid = document.getElementById('teamGrid');
   lawyers.forEach(l => {
     const card = document.createElement('div');
@@ -319,6 +344,8 @@
     `;
     grid.appendChild(card);
   });
+
+  // FIX #6: Tambahkan fungsi submit sederhana dengan validasi
   function handleSubmit() {
     const nama = document.getElementById('nama').value.trim();
     const telp = document.getElementById('telp').value.trim();
