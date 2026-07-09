@@ -4,13 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aleitha Law — Advocates & Legal Consultants</title>
-  <!-- FIX #1: Tambahkan link Tabler Icons yang hilang agar ikon muncul -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-  <!-- FIX #2: Tambahkan font Google Fonts karena var(--font-sans) tidak terdefinisi -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    /* FIX #3: Definisikan CSS variable --font-sans yang sebelumnya kosong/tidak ada */
     :root {
       --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
     }
